@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selectors and Properties</title>
+    <style>
+    /* Apply background color and curved corners */
+body {
+    background-color: #a8d0e6; 
+    color: black;               
+    padding: 20px;              
+    margin: 20px;               
+    border-radius: 25px;        
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}
+      
+
+        /* Element Selector */
+        p {
+            color: brown;
+            font-size: 19px;
+        }
+
+        /* Class Selector */
+        .highlight {
+            background-color: #f5f5f5;
+            font-weight: bold;
+        }
+
+        /* ID Selector */
+        #unique-element {
+            color: purple;
+            font-size: 24px;
+        }
+
+        /* Attribute Selector */
+        [title] {
+            color: green;
+        }
+
+        /* Pseudo-Class */
+        a:hover {
+            color: purple;
+        }
+
+        /* Pseudo-Element */
+        p::first-letter {
+            font-size: 32px;
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Selectors</h1>
+    <p>This is a paragraph which is just a normal paragraph looking paragraph so read it like a paragraph cause why not cause it is a paragraph.This is a paragraph which is just a normal paragraph looking paragraph so read it like a paragraph cause why not cause it is a paragraph.This is a paragraph which is just a normal paragraph looking paragraph so read it like a paragraph cause why not cause it is a paragraph.This is a paragraph which is just a normal paragraph looking paragraph so read it like a paragraph cause why not cause it is a paragraph.This is a paragraph which is just a normal paragraph looking paragraph so read it like a paragraph cause why not cause it is a paragraph.</p>
+    <p class="highlight">This paragraph needs to get highlighted so I'm highlighting it. But prefer to treat it like a normal paragraph cause ofcourse it is only a prargraph.</p>
+    <p id="unique-element">This has to be a unique element.So, sir treat it as a unique element. </p>
+    <a href="#" title="This is a link">Cover me with this link!!!!</a>
+    
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Colors and Backgrounds</title>
+    <style>
+    
+    body {
+    background-color: #f9d5d3; 
+    color: black;               
+    padding: 20px;              
+    margin: 20px;               
+    border-radius: 20px;        
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);}
+      
+        /* Text Color */
+        h1 {
+            color: blue;
+        }
+
+        /* Background Color */
+        .box {
+            background-color: #e74c3c;
+            padding: 30px;
+            margin: 20px;
+        }
+
+        /* Gradient Background */
+        .gradient {
+            background: linear-gradient(to right, #f39c12, #f1c40f);
+            padding: 10px;
+            color: white;
+        }
+
+        /* Background Image */
+        .bg-image {
+            background-image:url('https://via.placeholder.com/150');
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Color and Background</h1>
+    <div class="box">This is a box with a background color as Red and yes that Red only jiske roses hoe hain.</div>
+    <div class="gradient">This is a box with a gradient background.Yes, Its' exciting. I know.</div> <br>
+    <div class="bg-image">This is a box.</div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Typography</title>
+    <style>
+        /* Font Properties */
+        p {
+            font-family: 'Arial', sans-serif;
+            font-size: 26px;
+            font-style: italic;
+            line-height: 1.0;
+        }
+        
+        h1 {
+            font-family: 'Georgia', serif;
+            font-size: 46px;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1.5;
+        }
+
+        .small-text {
+            font-size: 16px;
+        }
+
+        .large-text {
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Typography Styles</h1>
+    <p>This is a paragraph showcasng various font properties like 'font-size', 'font-weight', 'font-style', and many more...</p>
+    <p class="small-text">This is smaller text.</p>
+    <p class="large-text">This is larger text.</p>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 20px;
+        }
+
+        .box {
+            padding: 20px;          
+            border: 5px solid ; 
+            margin: 10px;          
+            width: 200px;         
+            box-sizing: content-box;
+            background-color: yellow;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+        }
+
+        .description {
+            font-size: 14px;
+            color: brown;
+            margin: 10px 0;
+        }
+    </style>
+    <title>Brief Demonstration of Box Model</title>
+</head>
+<body>
+    <h2>CSS Box Model Demonstration</h2>
+    <div class="box">
+        <p>The property is set to <strong>content-box</strong> which is also a Default representation.</p>
+    </div>
+
+    <div class="box border-box">
+        <p>This setup uses <strong>border-box</strong> representation.</p>
+    </div>
+
+    <p class="description">
+        In the <strong>content-box</strong> model, which is default setting too, represents how the box model works  when the conten's dimensions are specified. 
+        <br><br>
+        In the <strong>border-box</strong> model, simplifying layout representaion as dimensions are given.
+    </p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+        margin: 20px;
+            font-family: Arial, sans-serif;
+            
+        }
+
+        .flex-container {
+            display: flex;
+            height: 200px; 
+            justify-content: space-around;       
+            align-items: center;                                       
+            background-color: ghostwhite;          
+            border: 2px solid #ccc;             
+        }
+
+        .item {
+            background-color: teal;       
+            flex: 1; 
+            padding: 20px;                      
+            margin: 10px;                       
+            border-radius: 5px;                  
+            text-align: center;                  
+        }
+        h2 {
+            text-align: center;
+            color: cadetblue;
+        }
+    </style>
+    <title>Flexbox Basics</title>
+</head>
+<body>
+    <h2>Flexbox Layout Example:</h2>
+    <div class="flex-container">
+        <div class="item">Content 1</div>
+        <div class="item">Content 2</div>
+        <div class="item">Content 3</div>
+    </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: ghostwhite; 
+
+        .main-container {
+            display: flex;                      
+            flex-wrap: wrap;                    
+            justify-content: space-around;      
+            margin-bottom: 20px;               
+        }
+
+        .card {
+            background-color: lightcyan;      
+            padding: 20px;                     
+            margin: 10px;                      
+            border-radius: 5px;                
+            width: 250px;                      
+            display: flex;                     
+            flex-direction: column;             
+            justify-content: space-between;     
+        }
+
+        .card-title {
+            font-size: 1.5em;                   
+            color: darkslategray;                        
+        }
+
+        .card-content {
+            flex-grow: 1;                       
+            color: #333;                        
+        }
+
+        .card-footer {
+            text-align: center;                 
+            color: darlslategray;                        
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+    <title>Advanced Flexbox Layout</title>
+</head>
+<body>
+    <h2>Advanced Flexbox Layout as in Example</h2>
+    <div class="main-container">
+        <div class="card">
+            <div class="card-title">1</div>
+            <div class="card-content">Respective content for the first card block.</div>
+            <div class="card-footer">Footer 1</div>
+        </div>
+        <div class="card">
+            <div class="card-title">2</div>
+            <div class="card-content">Content for card 2.</div>
+            <div class="card-footer">Footer 2</div>
+        </div>
+        <div class="card">
+            <div class="card-title">3</div>
+            <div class="card-content">Content for card 3.</div>
+            <div class="card-footer">Footer 3</div>
+        </div>
+        <div class="card">
+            <div class="card-title">4</div>
+            <div class="card-content">This card is having a longer piece of content.</div>
+            <div class="card-footer">Footer 4</div>
+        </div>
+    </div>
+</body>
+</html>
