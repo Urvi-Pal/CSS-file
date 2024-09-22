@@ -328,3 +328,1228 @@ body {
     </div>
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Webpage with Media Queries</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #745;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .menu {
+            background-color: #a9b470;
+            padding: 20px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .content {
+            background-color: #4caf50;
+            padding: 20px;
+            flex: 3;
+        }
+
+        .sidebar {
+            background-color: #ff9800;
+            padding: 20px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Tablet View */
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .menu, .sidebar {
+                display: none;
+            }
+
+            .content {
+                flex: 1;
+                padding: 40px;
+            }
+
+            .header {
+                font-size: 1.5rem;
+                padding: 30px;
+            }
+        }
+
+        /* Mobile View */
+        @media (max-width: 767px) {
+            .container {
+                flex-direction: column;
+                margin: 10px;
+            }
+
+            .header {
+                font-size: 1.2rem;
+                padding: 15px;
+            }
+
+            .content {
+                padding: 20px;
+                font-size: 1rem;
+            }
+
+            .footer {
+                font-size: 0.9rem;
+            }
+        }
+
+        /*max 480px) */
+        @media (max-width: 480px) {
+            .header {
+                font-size: 1rem;
+                padding: 10px;
+            }
+
+            .content {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+
+            .footer {
+                font-size: 0.8rem;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Responsive Web Design</h1>
+        </div>
+        
+        <div class="menu">
+            <h2>(Menu)</h2>
+            <p>All relevant Menu content goes here.</p>
+        </div>
+        
+        <div class="content">
+            <h2>(Main Content)</h2>
+            <p>This way ensures that the webpage adapts smoothy across various screen sizes, maintaining on all devices ranging from desktops to mobile phones.</p>
+        </div>
+        
+        <div class="sidebar">
+            <h2>(Sidebar)</h2>
+            <p>All relevant Sidebar content goes here.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Footer Area</p>
+    </div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Positioning Techniques</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .box {
+            background-color: #f8b400;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .static-box {
+            position: static;
+            background-color: #bcaf50;
+        }
+
+        .relative-box {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: #c44336;
+        }
+
+       .absolute-box-container {
+            position: relative;
+            background-color: #ddd;
+            padding: 50px;
+            margin-bottom: 40px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #ff9800;
+            padding: 20px;
+            color: white;
+        }
+
+.fixed-box {
+            position: fixed;
+            top: 5px;
+            right: 3px;
+            background-color: #9688;
+            color: white;
+            padding: 10px;
+            z-index: 100;
+        }
+
+       .sticky-box {
+            position: -webkit-sticky; 
+            position: sticky;
+            top: 0;
+            background-color: #533;
+            color: white;
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+       .content {
+            height: 2000px;
+            background-color: #e0e0e0;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1> CSS Positioning Techniques</h1>
+
+        <div class="box static-box">
+            <strong>Static Positioning:</strong> A default positioning which is positioned according to the normal document fow.
+        </div>
+
+        <div class="box relative-box">
+            <strong>Relative Positioning:</strong> Positioned relative to its normal position, 20px from the top and left.
+        </div>
+<div class="absolute-box-container">
+            <strong>Absolute Positioning Container:</strong> This container holds an absolutely positioned box.
+            <div class="absolute-box">
+                <strong>Absolute Positioning:</strong> Positioned relative to the nearest positioned ancestor (the container).
+            </div>
+        </div>
+<div class="fixed-box">
+            <strong>Fixed Positioning:</strong> It remains fixed to the top-right corner even when we do scrolling.
+        </div>
+
+<div class="box sticky-box">
+            <strong>Sticky Positioning:</strong> It gets fixed at the top of the screen when we scroll past it.
+        </div>
+
+        <div class="content">
+            <p>Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.Scroll down to see how sticky and fixed positioning work in action.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Footer Section</p>
+    </div>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Z-Index and Overlapping Elements</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #544;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .box-container {
+            position: relative;
+            height: 400px;
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        .box {
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            color: white;
+            font-size: 1.2rem;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-a {
+            background-color: #ff5722;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+        }
+
+        .box-b {
+            background-color: #4caf50;
+            top: 100px;
+            left: 100px;
+            z-index: 2;
+        }
+
+        .box-c {
+            background-color: #2196f3;
+            top: 150px;
+            left: 150px;
+            z-index: 3;
+        }
+
+        .box-d {
+            background-color: #9c27b0;
+            top: 200px;
+            left: 200px;
+        }
+
+        .box-e {
+            background-color: #e91e63;
+            top: 250px;
+            left: 250px;
+            z-index: -1;
+        }
+
+        .footer {
+            margin-top: 100px;
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Z-Index and Overlapping Elements</h1>
+
+        <div class="box-container">
+            <div class="box box-a">Box A (z-index: 1)</div>
+            <div class="box box-b">Box B (z-index: 2)</div>
+            <div class="box box-c">Box C (z-index: 3)</div>
+            <div class="box box-d">Box D (no z-index)</div>
+            <div class="box box-e">Box E (z-index: -1)</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Footer Section</p>
+    </div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Transitions Demo</title>
+    <style>
+        
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            background-color: #2196f3;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .box:hover {
+            background-color: #ff5722;
+            transform: scale(1.2);
+        }
+
+        .color-box {
+            background-color: #4caf50;
+            transition: background-color 1s ease, color 1s ease;
+        }
+
+        .color-box:hover {
+            background-color: #e91e63;
+            color: #fff;
+        }
+
+        .size-box {
+            width: 150px;
+            height: 150px;
+            background-color: #9c27b0;
+            transition: width 0.7s ease, height 0.7s ease;
+        }
+
+        .size-box:hover {
+            width: 250px;
+            height: 250px;
+        }
+
+        .delay-box {
+            background-color: #ffeb3b;
+            transition: transform 0.7s ease, background-color 0.7s ease 0.3s;
+        }
+
+        .delay-box:hover {
+            transform: rotate(45deg);
+            background-color: #8bc34a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CSS Transitions Demo</h1>
+
+        <div class="box">Hover Me</div>
+
+        <div class="box color-box">Color Transition hua h</div>
+
+        <div class="box size-box">Size Transition tick</div>
+
+        <div class="box delay-box">Delay Transition</div>
+    </div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Animations Demo</title>
+    <style>
+ body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #b6c4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .square {
+            background-color: #2196f3;
+        }
+
+        .circle {
+            background-color: #4caf50;
+            border-radius: 50%;
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 75px solid transparent;
+            border-right: 75px solid transparent;
+            border-bottom: 150px solid #ff5722;
+            margin: 0 auto;
+        }
+
+        .rectangle {
+            width: 250px;
+            height: 100px;
+            background-color: #9c27b0;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(300px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                background-color: #2196f3;
+            }
+            50% {
+                background-color: #ff5722;
+            }
+            100% {
+                background-color: #2196f3;
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes grow {
+            0% {
+                width: 150px;
+                height: 150px;
+            }
+            50% {
+                width: 250px;
+                height: 250px;
+            }
+            100% {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        .move-box {
+            animation: move 4s ease-in-out infinite;
+        }
+
+        .color-box {
+            animation: colorChange 3s ease-in-out infinite;
+        }
+
+        .rotate-box {
+            animation: rotate 2s linear infinite;
+        }
+
+        .grow-box {
+            animation: grow 3s ease-in-out infinite;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CSS Animations Demo </h1>
+
+        <div class="box square move-box"></div>
+
+        <div class="box circle color-box"></div>
+
+        <div class="triangle rotate-box"></div>
+
+        <div class="rectangle grow-box"></div>
+    </div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Layout Demo</title>
+    <style>
+body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #2196f3;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: calc(30% - 40px);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+        }
+
+        footer {
+            background-color: #2196f3;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: calc(45% - 40px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: calc(100% - 40px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Flexbox Layout Demo</h1>
+        </header>
+
+        <main>
+            <div class="card">
+                <h2>Description</h2>
+                <p>Description of the respective topic.</p>
+            </div>
+            <div class="card">
+                <h2>More About</h2>
+                <p>More about the respective topic.</p>
+            </div>
+            <div class="card">
+                <h2>Related Info.</h2>
+                <p>Related Information on the same topic.</p>
+            </div>
+            <div class="card">
+                <h2>Contacts</h2>
+                <p>Reach out to me.</p>
+            </div>
+            <div class="card">
+                <h2>Socials</h2>
+                <p>My socials to know more about me.</p>
+            </div>
+        </main>
+
+        <footer>
+        <hr>
+            <p>&copy; 2024 Flexbox Layout Demo</p><hr>
+        </footer>
+    </div>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Layout Demo</title>
+    <style>
+body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #2196f3;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: calc(30% - 40px);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) rotate(5deg) scale(1.05) skew(2deg);
+        }
+
+        footer {
+            background-color: #2196f3;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: calc(45% - 40px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: calc(100% - 40px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Flexbox Layout Demo</h1>
+        </header>
+
+        <main>
+            <div class="card">
+                <h2>Content Description</h2>
+                <p>Description on the respective topic.</p>
+            </div>
+            <div class="card">
+                <h2>Related Info.</h2>
+                <p>Related info. on the respective topic.</p>
+            </div>
+            <div class="card">
+                <h2>About More</h2>
+                <p>To know more.</p>
+            </div>
+            <div class="card">
+                <h2>Socials</h2>
+                <p>Let's know eachother.</p>
+            </div>
+            <div class="card">
+                <h2>Contacts</h2>
+                <p>Reach out to me.</p>
+            </div>
+        </main>
+
+        <footer>
+        <hr>
+            <p>&copy; 2024 Flexbox Layout Demo</p>
+            <hr>
+        </footer>
+    </div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grid and Flexbox Layout</title>
+    <style>
+ body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 1fr;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #2196f3;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        footer {
+            background-color: #2196f3;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header, footer {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Grid and Flexbox Layout Demo</h1>
+        </header>
+
+        <main>
+            <div class="card">
+                <h2>Description</h2>
+                <p>Description on the respective topic..</p>
+            </div>
+            <div class="card">
+                <h2>What to know?</h2>
+                <p>Let's know more about it.</p>
+            </div>
+            <div class="card">
+                <h2>More About</h2>
+                <p>To know more.</p>
+            </div>
+            <div class="card">
+                <h2>Realted socials</h2>
+                <p>Reach out to me.</p>
+            </div>
+            <div class="card">
+                <h2>Reated song</h2>
+                <p>My fav songs.</p>
+            </div>
+            <div class="card">
+                <h2>Related link</h2>
+                <p>Many related links.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Grid and Flexbox Layout Demo</p>
+        </footer>
+    </div>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Styled Form Example</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: beige;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        input:invalid {
+            border-color: red;
+        }
+
+        input:valid {
+            border-color: green;
+        }
+
+        fieldset {
+            border: none;
+            margin: 15px 0;
+            padding: 0;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .hobbies {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Styled Form Example</h1>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <fieldset>
+                <legend>Gender:</legend>
+                <label>
+                    <input type="radio" name="gender" value="male" required> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female"> Female
+                </label>
+            </fieldset>
+
+            <label><strong>Hobbies:</strong></label>
+            <div class="hobbies">
+                <label>
+                    <input type="checkbox" name="hobbies" value="reading"> Reading
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="traveling"> Traveling
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="gaming"> Gaming
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="cooking"> Cooking
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="sports"> Sports
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="music"> Music
+                </label>
+            </div>
+
+            <label for="country"><strong>Country:</strong></label>
+            <select id="country" required>
+                <option value="">Select your country</option>
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="uk">UK</option>
+                <option value="australia">Australia</option>
+                <option value="india">India</option>
+                <option value="germany">Germany</option>
+                <option value="france">France</option>
+                <option value="japan">Japan</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="footer">
+            &copy; 2024 | Urvi Paradise | +91xxx-xxx-xxxx
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>My Profile Card</title>
+    <style>
+        :root {
+            --primary-color: #e67e22;
+            --background-color: #fff;
+            --text-color: #34495e;
+            --spacing: 15px;
+            --border-radius: 10px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ecf0f1;
+            margin: 0;
+            padding: var(--spacing);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .profile-card {
+            background: var(--background-color);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: var(--spacing);
+            width: 300px;
+            text-align: center;
+        }
+
+        .profile-card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-bottom: var(--spacing);
+        }
+
+        .profile-card h2 {
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        .profile-card p {
+            color: var(--primary-color);
+            margin: var(--spacing) 0;
+        }
+
+        .profile-card button {
+            padding: var(--spacing);
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .profile-card button:hover {
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/04/senku-talking-to-why-man-on-the-telephone.jpg" alt="Profile Picture">
+        <h2>Urvi Pal</h2>
+        <p>Web Developer</p>
+        <button>Follow</button>
+    </div>
+</body>
+</html>
+
+
+
+
+
